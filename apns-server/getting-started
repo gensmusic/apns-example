@@ -1,0 +1,9 @@
+
+# env and dependencies
+
+	$ virtualenv pyenv
+	$ echo pyenv >> .gitignore
+	$ source ./pyenv/bin/activate
+	$ pip install apns
+
+#
