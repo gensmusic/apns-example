@@ -1,8 +1,9 @@
 import time
+import os
 from apns import APNs, Frame, Payload
 
-cert_file = 'a_fake_cert_file.pem'
-key_file = 'a_fake_key_file.pem'
+cert_file = os.environ.get('APNS_PUBLIC_PEM')
+key_file = os.environ.get('APNS_PUBLIC_PEM')
 
 apns = APNs(use_sandbox=True, cert_file=cert_file, key_file=key_file)
 

@@ -1,0 +1,17 @@
+
+1. after generating the apns certificate on developer memeber center, download it and saved as apns-dev.cer
+
+2. double-click on apns-dev.cer and install it into keychain
+
+3. find the imported 'Push APNS Developement' key.
+   there is public and private key.
+   right click to export them to .p12 or .pem
+   # when ask you to set password, just set as empty
+
+4. use command to get .pem
+openssl pkcs12 -clcerts -out apns-dev-cert-private.pem -in apns-dev-cert-private.p12
+# this will ask you to enter import password which is empty
+# then will ask you to enter a new pem password, set it or it'll contain no private key
+
+5. now we have the public and private .pem file
+   apns-dev-cert-private.pem	apns-dev-cert-public.pem
