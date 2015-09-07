@@ -4,6 +4,13 @@
 	$ virtualenv pyenv
 	$ echo pyenv >> .gitignore
 	$ source ./pyenv/bin/activate
-	$ pip install apns
+	$ pip install flask
+    $ pip install flask-script
+    $ pip install flask-sqlalchemy
+    $ pip install flask-wtf
 
-#
+# how to install flask-apns
+    $ git clone https://github.com/gilles/flask-apns.git
+    $ tar zcvf flask-apns.tar.gz flask-apns
+    $ pip install ./flask-apns.tar.gz
+
